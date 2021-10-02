@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/History"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="Openhistory"
+        android:text="History"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RollAll" />
+
+    <Button
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="-10dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="FctMinus"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/NbrDices"
+        app:layout_constraintStart_toStartOf="@+id/NbrDices"
+        app:layout_constraintTop_toTopOf="@+id/btnPlus" />
+
+    <Button
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="FctPlus"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/NbrDices"
+        app:layout_constraintTop_toBottomOf="@+id/LableDices" />
+
+    <TextView
+        android:id="@+id/NbrDices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPlus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/Dice3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="180dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="@+id/btnPlus"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/Dice4"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="188dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="@+id/btnMinus"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinus"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <Button
+        android:id="@+id/RollNextDice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="RollOneDice"
+        android:text="Roll Next Dices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/RollAll"
+        app:layout_constraintTop_toTopOf="@+id/RollAll" />
+
+    <TextView
+        android:id="@+id/LableDices"
+        android:layout_width="115dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/nbr_of_dices"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/RollAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="316dp"
+        android:backgroundTint="#E91E63"
+        android:onClick="RollAllDices"
+        android:text="Roll All Dices"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
+
+    <ImageView
+        android:id="@+id/Dice1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="@+id/btnPlus"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus"
+        tools:srcCompat="@drawable/dice_1" />
+
+    <ImageView
+        android:id="@+id/Dice2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="@+id/btnMinus"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/Dice1"
+        app:layout_constraintTop_toBottomOf="@+id/btnMinus"
+        tools:srcCompat="@drawable/dice_1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
