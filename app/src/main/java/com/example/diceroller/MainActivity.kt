@@ -1,5 +1,7 @@
 package com.example.diceroller
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -8,9 +10,20 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import com.android.volley.Request
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
+import org.json.JSONObject
 
 
 class MainActivity : AppCompatActivity() {
+
+    companion object
+    {
+        @SuppressLint("StaticFieldLeak")
+        @JvmStatic
+        lateinit var context: Context
+    }
 
     lateinit var NombreDeDice: TextView
     lateinit var Plusbtn: Button
@@ -22,8 +35,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        context = applicationContext
         NombreDeDice=findViewById(R.id.NbrDices)
-
         Plusbtn=findViewById(R.id.btnPlus)
         Minusbtn =findViewById(R.id.btnMinus)
         ListofImage.add(findViewById(R.id.Dice1))
@@ -57,8 +70,6 @@ class MainActivity : AppCompatActivity() {
         Plusbtn.isEnabled = NombreDeDice.text != "4"
     }
 
-
-
     fun RollAllDices(sender: View)
     {
         val Liste: MutableList<Int> = mutableListOf()
@@ -75,7 +86,9 @@ class MainActivity : AppCompatActivity() {
         {
             ListofImage[i].isVisible=false
         }
-        AllResult.Ajoutez_un_Res(ResultDices(Liste, X))
+      //  AllResult.Ajoutez_un_Res(ResultDices(Liste, X))
+        PostAPI(Liste)
+
     }
 
     fun RollOneDice(sender: View)
@@ -99,7 +112,8 @@ class MainActivity : AppCompatActivity() {
         {
             ListofImage[i].isVisible=false
         }
-        AllResult.Ajoutez_Un_Dice(Rand,X)
+       // AllResult.Ajoutez_Un_Dice(Rand,X)
+        PostAPI(Liste)
     }
     private fun newDiceImage(randum_nb: Int): Int
     {
@@ -121,20 +135,36 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+
+
+    private fun PostAPI(Dice : MutableList<Int>)
+    {
+        val url = "https://615c198ac298130017735f0a.mockapi.io/Dices"
+        val queue = Volley.newRequestQueue(this)
+        val jsonObjectRequest = JsonObjectRequest(
+            Request.Method.POST, url, JSONObject("{\"Dices\":${Dice}}"),
+            { response -> println(response) },
+            { error -> error.printStackTrace() })
+        queue.add(jsonObjectRequest)
+
+    }
+
+
+
 }
 
 data class ResultDices(var Dices: MutableList<Int>, var NombreDeDices: Int)
 {
-    fun ToString(): String
+    override fun toString(): String
     {
         var result : String = ""
-        result += NombreDeDices
-        result += ": "
+        result += "[ "
         for (item in Dices)
         {
             result += item
-            result += " "
+            result += "  "
         }
+        result+="] Nombre of Dice: "+NombreDeDices
 
         return result
     }
@@ -155,26 +185,27 @@ object AllResult
     {
         return All_Result;
     }
-    fun Ajoutez_Un_Dice(dice: Int,NombreOfDice: Int)
-    {
-        if(All_Result.size==0)
-        {
-            val tmp : MutableList<Int> = mutableListOf(dice)
+    fun Ajoutez_Un_Dice(dice: Int,NombreOfDice: Int) {
+        if (All_Result.size == 0) {
+            val tmp: MutableList<Int> = mutableListOf(dice)
             All_Result.add(ResultDices(tmp, NombreOfDice))
             return
         }
-        var LastResult= All_Result.removeLast()
-        if(LastResult.Dices.size==LastResult.NombreDeDices)
-        {
+        var LastResult = All_Result.removeLast()
+        if (LastResult.Dices.size == LastResult.NombreDeDices) {
             All_Result.add(LastResult)
-            val tmp : MutableList<Int> = mutableListOf(dice)
+            val tmp: MutableList<Int> = mutableListOf(dice)
             All_Result.add(ResultDices(tmp, NombreOfDice))
-        }
-        else
-        {
+        } else {
             LastResult.Dices.add(dice)
             LastResult.NombreDeDices = NombreOfDice
             All_Result.add(LastResult)
         }
     }
+
+    fun size(): Int
+    {
+        return  All_Result.size
+    }
 }
+
