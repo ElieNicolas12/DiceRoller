@@ -13,11 +13,13 @@
         android:layout_marginTop="16dp"
         android:backgroundTint="#E91E63"
         android:onClick="Openhistory"
-        android:text="History"
+        android:text="@string/history"
+        android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RollAll" />
+        app:layout_constraintTop_toBottomOf="@+id/RollAll"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btnMinus"
@@ -27,10 +29,11 @@
         android:layout_marginBottom="-10dp"
         android:backgroundTint="#E91E63"
         android:onClick="FctMinus"
-        android:text="-"
+        android:text="@string/Minus"
         app:layout_constraintBottom_toBottomOf="@+id/NbrDices"
         app:layout_constraintStart_toStartOf="@+id/NbrDices"
-        app:layout_constraintTop_toTopOf="@+id/btnPlus" />
+        app:layout_constraintTop_toTopOf="@+id/btnPlus"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/btnPlus"
@@ -40,16 +43,19 @@
         android:layout_marginEnd="36dp"
         android:backgroundTint="#E91E63"
         android:onClick="FctPlus"
-        android:text="+"
+        android:text="@string/Plus"
+        android:textColor="#000000"
         app:layout_constraintEnd_toStartOf="@+id/NbrDices"
-        app:layout_constraintTop_toBottomOf="@+id/LableDices" />
+        app:layout_constraintTop_toBottomOf="@+id/LableDices"
+        app:strokeColor="#000000"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/NbrDices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="1"
+        android:text="@string/_1"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/btnPlus"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +66,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="180dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/todo3"
         app:layout_constraintStart_toStartOf="@+id/btnPlus"
         app:layout_constraintTop_toBottomOf="@+id/btnPlus"
         tools:srcCompat="@drawable/dice_1" />
@@ -70,7 +76,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="188dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/todo4"
         app:layout_constraintEnd_toEndOf="@+id/btnMinus"
         app:layout_constraintTop_toBottomOf="@+id/btnMinus"
         tools:srcCompat="@drawable/dice_1" />
@@ -79,14 +85,15 @@
         android:id="@+id/RollNextDice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#E91E63"
         android:onClick="RollOneDice"
-        android:text="Roll Next Dices"
-        app:layout_constraintEnd_toEndOf="@+id/Dice4"
-        app:layout_constraintHorizontal_bias="0.019"
+        android:text="@string/roll_next_dices"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/RollAll"
-        app:layout_constraintTop_toTopOf="@+id/RollAll" />
+        app:layout_constraintTop_toTopOf="@+id/RollAll"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/LableDices"
@@ -104,21 +111,22 @@
         android:id="@+id/RollAll"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="316dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="324dp"
         android:backgroundTint="#E91E63"
         android:onClick="RollAllDices"
-        android:text="Roll All Dices"
-        app:layout_constraintEnd_toEndOf="@+id/Dice3"
-        app:layout_constraintHorizontal_bias="0.618"
-        app:layout_constraintStart_toStartOf="@+id/Dice3"
-        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
+        android:text="@string/roll_all_dices"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/Dice1"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/todo1"
         app:layout_constraintStart_toStartOf="@+id/btnPlus"
         app:layout_constraintTop_toBottomOf="@+id/btnPlus"
         tools:srcCompat="@drawable/dice_1" />
@@ -128,7 +136,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
-        android:contentDescription="TODO"
+        android:contentDescription="@string/todo2"
         app:layout_constraintEnd_toEndOf="@+id/btnMinus"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/Dice1"

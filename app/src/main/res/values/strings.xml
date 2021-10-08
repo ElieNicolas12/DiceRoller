@@ -2,4 +2,16 @@
     <string name="app_name">DiceRoller</string>
     <string name="nbr_of_dices">Nbr. of Dices</string>
     <string name="button">Button</string>
+    <string name="deleteall">deleteAll</string>
+    <string name="back">back</string>
+    <string name="history">History</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="roll_all_dices">Roll All Dices</string>
+    <string name="roll_next_dices">Roll Next Dices</string>
+    <string name="todo3">TODO</string>
+    <string name="todo4">TODO</string>
+    <string name="Minus">-</string>
+    <string name="Plus">+</string>
+    <string name="_1">1</string>
 </resources>
