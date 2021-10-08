@@ -79,12 +79,12 @@
         android:id="@+id/RollNextDice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="24dp"
         android:backgroundTint="#E91E63"
         android:onClick="RollOneDice"
         android:text="Roll Next Dices"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toEndOf="@+id/Dice4"
+        app:layout_constraintHorizontal_bias="0.019"
         app:layout_constraintStart_toEndOf="@+id/RollAll"
         app:layout_constraintTop_toTopOf="@+id/RollAll" />
 
@@ -108,9 +108,9 @@
         android:backgroundTint="#E91E63"
         android:onClick="RollAllDices"
         android:text="Roll All Dices"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Dice3"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintStart_toStartOf="@+id/Dice3"
         app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
 
     <ImageView
