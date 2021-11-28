@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1030976388587",
+    "firebase_url": "https://diceroller-7a97f-default-rtdb.firebaseio.com",
+    "project_id": "diceroller-7a97f",
+    "storage_bucket": "diceroller-7a97f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030976388587:android:cd7ab2367bbd3d7c7b2dae",
+        "android_client_info": {
+          "package_name": "com.example.diceroller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030976388587-p5d947103lgksqjeauplvgfhqvpv1llu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHGJvj8883Kj7tzjZZ1zFKRCaCzm2maj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030976388587-p5d947103lgksqjeauplvgfhqvpv1llu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
