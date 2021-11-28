@@ -10,16 +10,16 @@
         android:id="@+id/History"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#E91E63"
         android:onClick="Openhistory"
         android:text="@string/history"
         android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RollAll"
-        tools:ignore="TextContrastCheck" />
+        app:layout_constraintEnd_toEndOf="@+id/RollNextDice"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toEndOf="@+id/RollAll"
+        app:layout_constraintTop_toBottomOf="@+id/RollNextDice"
+        tools:ignore="MissingConstraints,TextContrastCheck" />
 
     <Button
         android:id="@+id/btnMinus"
@@ -142,5 +142,17 @@
         app:layout_constraintStart_toEndOf="@+id/Dice1"
         app:layout_constraintTop_toBottomOf="@+id/btnMinus"
         tools:srcCompat="@drawable/dice_1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:onClick="MultiPlayer"
+        android:text="MultiPlayer"
+        app:layout_constraintEnd_toStartOf="@+id/RollNextDice"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="@+id/RollAll"
+        app:layout_constraintTop_toBottomOf="@+id/RollAll" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
