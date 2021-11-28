@@ -2,4 +2,25 @@
     <string name="app_name">DiceRoller</string>
     <string name="nbr_of_dices">Nbr. of Dices</string>
     <string name="button">Button</string>
+    <string name="deleteall">deleteAll</string>
+    <string name="back">back</string>
+    <string name="history">History</string>
+    <string name="todo1">TODO</string>
+    <string name="todo2">TODO</string>
+    <string name="roll_all_dices">Roll All Dices</string>
+    <string name="roll_next_dices">Roll Next Dices</string>
+    <string name="todo3">TODO</string>
+    <string name="todo4">TODO</string>
+    <string name="Minus">-</string>
+    <string name="Plus">+</string>
+    <string name="_1">1</string>
+    <string name="title_activity_multi">MultiActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

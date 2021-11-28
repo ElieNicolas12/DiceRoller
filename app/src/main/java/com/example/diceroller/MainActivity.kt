@@ -134,6 +134,11 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
     }
+    fun MultiPlayer(sender: View)
+    {
+        val intent = Intent(this, MutliPlayerActivity::class.java)
+        startActivity(intent)
+    }
 
 
 
